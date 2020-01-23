@@ -41,11 +41,11 @@ body {
   <h1>Mathematics</h1>
   <div id="sequences">
     <h2>Sequences</h2>
-    <h3>Arithmetic Sequence</h3>
+    <h3>Arithmetic sequence</h3>
     <p>$x_n = a + n\cdot d\quad$ where $a,d$ are fixed real numbers, and $n \in \mathbb{N}_0$.</p>
     <h3>Geometric Sequence</h3>
     <p>$x_n = a\cdot q^n\quad$ where $a,q$ are fixed real numbers, and $n \in \mathbb{N}_0$.</p>
-    <h3>Rings of Real Sequences</h3>
+    <h3>Rings of real sequences</h3>
     <p>The real sequences ($R$) are a commutative unitary ring with pointwise addition and multiplication, and the zero- and one-elements $(0)_{n=0}^\infty,\ (1)_{n=0}^\infty$. Which means:</p>
     <ul>
       <li>$(R,+)$ is an Abelian group (= associative, commutative, with zero, with inverse).</li>
@@ -72,6 +72,46 @@ body {
       \]
     </p>
     <p>This expands to: $(x_0y_0,\quad x_0y_1 + x_1y_0,\quad x_0y_2 + x_1y_1 + x_2y_0,\quad \dots)$</p>
+    <h3>Euler number as limit</h3>
+    <p>
+    \begin{align}
+                        \lim_{n\rightarrow\infty} \left(1+\frac{1}{n}\right)^n &= e \\
+      \text{Likewise, } \lim_{n\rightarrow\infty} \left(1+\frac{c}{n}\right)^n &= e^c \quad (c\in\mathbb{R})
+    \end{align}
+    </p>
+    <h3>Limit algebra with infinity</h3>
+    <p>
+      Let $(x_n), (y_n)$ be sequences with $x_n\rightarrow x,\ y_n\rightarrow y$. Then:
+    </p>
+    <p>
+      \begin{align}
+        (x_n \pm y_n)_n     & \rightarrow x\pm y \\
+        (x_n \cdot y_n)_n   & \rightarrow x\cdot y \\
+        \left(\frac{x_n}{y_n}\right)_n & \rightarrow \frac{x}{y}\quad\text{for } y\neq 0 \\
+        \left(x_n^{y_n}\right)_n       & \rightarrow x^y\quad\text{for } x,y \in \mathbb{R} \land\lnot (x=y=0)
+      \end{align}      
+      ($0^0$ is an expression with no agreed-upon value.)
+    </p>
+    <p>Moreover,
+      \begin{align}
+        \frac{1}{0^+} = \infty\quad\text{and}\quad\frac{1}{0^-} = -\infty
+      \end{align}
+      where $0^+, 0^-$ are the limits of sequences tending to zero where all but a finite number of elements are above zero, or below zero respectively.
+    </p>
+    <h3>Theorems about sequences</h3>
+    <ul>
+      <li>Every bounded sequence has a convergent subsequence. (<em>Bolzano-Weierstrass</em>)</li>
+      <li>All subsequences of a convergent sequence converge to the same limit as the sequence.</li>
+      <li>If a sequence has two subsequences that converge to different limits, the sequence is divergent.</li>
+    </ul>
+    <h3>Cauchy sequences</h3>
+    <p>
+      A sequence $(x_n)$ is called a Cauchy sequence if
+      \[
+        \forall\epsilon >0 \quad \exists N : \forall m,n \geq N \quad |x_n - x_m| < \epsilon
+      \]
+      A sequence is a Cauchy sequence iif it is convergent.
+    </p>
   </div> <!-- sequences -->
 </div> <!-- mathematics -->
 
