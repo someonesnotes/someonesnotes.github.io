@@ -16,7 +16,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-
   </script>
   <style>
 body {
-  width: 70%;
+  max-width: 960px;
   margin: auto;
 }    
   </style>
@@ -45,8 +45,37 @@ body {
     <p>$x_n = a + n\cdot d\quad$ where $a,d$ are fixed real numbers, and $n \in \mathbb{N}_0$.</p>
     <h3>Geometric Sequence</h3>
     <p>$x_n = a\cdot q^n\quad$ where $a,q$ are fixed real numbers, and $n \in \mathbb{N}_0$.</p>
+    <h3>Rings of Real Sequences</h3>
+    <p>The real sequences ($R$) are a commutative unitary ring with pointwise addition and multiplication, and the zero- and one-elements $(0)_{n=0}^\infty,\ (1)_{n=0}^\infty$. Which means:</p>
+    <ul>
+      <li>$(R,+)$ is an Abelian group (= associative, commutative, with zero, with inverse).</li>
+      <li>$(R,\cdot)$ is a commutative monoid (= associative, commutative, with one).</li>
+      <li>Multiplication is distributive with respect to addition:
+        \begin{align}
+          (x_n) \cdot ((y_n) + (z_n)) &= (x_n)\cdot (y_n) + (x_n)\cdot (z_n) \quad & \text{(left-distributive)} \\
+          ((x_n) + (y_n)) \cdot (z_n) &= (x_n)\cdot (z_n) + (y_n)\cdot (z_n) \quad & \text{(right-distributive)}
+        \end{align}
+      </li>
+    </ul>
+    <p>However, pointwise multiplication is rarely used with real sequences. There is another operation which is much more relevant, and it is called <b>convolution</b> ($\ast$). $(R,+,\ast)$ is also a commutative unitary ring, with the zero-element as above, and the one-element:
+      \[
+      1_R := (x_n)_{n=0}^\infty\quad\text{where}\quad x_n=
+        \begin{cases}
+          1 &,n=0\\
+          0 &,\text{otherwise}
+        \end{cases}
+      \]
+    </p>
+    <p>Convolution is defined as:
+      \[
+      (x_n) \ast (y_n) := \left( \sum_{k=0}^n x_k y_{n-k} \right)_{n=0}^\infty
+      \]
+    </p>
+    <p>This expands to: $(x_0y_0,\quad x_0y_1 + x_1y_0,\quad x_0y_2 + x_1y_1 + x_2y_0,\quad \dots)$</p>
   </div> <!-- sequences -->
 </div> <!-- mathematics -->
+
+<div style="height:400px"></div>
 
 </body>
 </html>
