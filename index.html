@@ -146,6 +146,27 @@ body {
       <li>$-\infty=(-1)\cdot\infty$, and $(-1)$ may be 'pulled out' before applying Hospital's rule.</li>
       <li><em>The</em> other <b>indeterminate forms</b> ($0\cdot\infty,\ \infty-\infty,\ 0^0,\ 1^\infty,\ \infty^0$) can be transformed into either of the indeterminate forms to which Hospital's rule can be applied.</li>
     </ul>
+    <h3>Dominance of terms in limit calculations</h3>
+    <p>Most to least dominant:</p>
+    <ul>
+      <li>$n^n$</li>
+      <li>$n!$</li>
+      <li>$q^n$ for $|q|>1$</li>
+      <li>$n^a$ for $a>0$</li>
+      <li>$[ln(n)]^a$ for $a>0$</li>
+    </ul>
+    Hence, e.g.
+    \[
+      \lim_{n\rightarrow\infty}\frac{n^n}{n!}=\infty\quad ,\quad\lim_{n\rightarrow\infty}\frac{n!}{n^n}=0
+    \]
+    <h3>Guessing limits: preserving dominant terms</h3>
+    <ol>
+      <li>$(5n^2 + n) - 3n^2 \sim 5n^2 - 3n^2 = 2n^2 \rightarrow\infty$</li>
+      <li>$(3n^2 + n) - 3n^2 \sim 3n^2 - 3n^2 = 0 \rightarrow 0\quad$<b>Wrong.</b></li>
+    </ol>
+    <p>
+      2. is wrong because the dominant term is cancelled when simplifying by subsuming under a dominant term. This must not happen.
+    </p>
   </div> <!-- sequences -->
 </div> <!-- mathematics -->
 
