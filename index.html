@@ -1,1 +1,52 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Someone's Notes</title>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+  </script>    
+  <script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <style>
+body {
+  width: 70%;
+  margin: auto;
+}    
+  </style>
+</head>
+<body>
+
+<div id="toc">
+  <h1>Table of Contents</h1>
+  <ul>
+    <li><a href="#mathematics">Mathematics</a></li>
+    <li>
+      <ul>
+        <li><a href="#sequences">Sequences</a></li>        
+      </ul>
+    </li>
+  </ul>
+</div> <!-- toc -->
+
+<hr>
+
+<div id="mathematics">
+  <h1>Mathematics</h1>
+  <div id="sequences">
+    <h2>Sequences</h2>
+    <h3>Arithmetic Sequence</h3>
+    <p>$x_n = a + n\cdot d\quad$ where $a,d$ are fixed real numbers, and $n \in \mathbb{N}_0$.</p>
+    <h3>Geometric Sequence</h3>
+    <p>$x_n = a\cdot q^n\quad$ where $a,q$ are fixed real numbers, and $n \in \mathbb{N}_0$.</p>
+  </div> <!-- sequences -->
+</div> <!-- mathematics -->
+
+</body>
+</html>
