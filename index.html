@@ -30,6 +30,7 @@ body {
     <li>
       <ul>
         <li><a href="#sequences">Sequences</a></li>        
+        <li><a href="#combinatorics">Combinatorics</a></li>        
       </ul>
     </li>
   </ul>
@@ -168,6 +169,49 @@ body {
       2. is wrong because the dominant term is cancelled when simplifying by subsuming under a dominant term. This must not happen.
     </p>
   </div> <!-- sequences -->
+  <div id="combinatorics">
+    <h2>Combinatorics</h2>
+    <h3>Number of solutions of an integer equation</h3>
+    <p>
+      Given the equation
+      \[
+        \sum_{i=1}^r x_i = n \quad ,\quad n \in \mathbb{N}_0^+
+      \]      
+    </p>
+    <ol>
+      <li>
+        How many solutions are there where all $x_i$ are <b>positive</b> integers?
+        \[
+          \binom{n-1}{r-1}
+        \]
+      </li>
+      <li>
+        How many solutions are there where all $x_i$ are <b>nonnegative</b> integers?
+        \[
+          \binom{n+r-1}{r-1}
+        \]
+      </li>
+    </ol>
+    <h4>Sample problem</h4>
+    <p>Suppose you have 20 units of money and 4 investment opportunities to choose from. How many possible investments are there if you can also invest less than 20 units? Two solutions are given.</p>
+    <ol>
+      <li>
+        \[
+          \sum_{n=0}^{20} \binom{n+3}{3} = 10626
+        \]
+      </li>
+      <li>
+        Introduce a fifth variable that holds the amount of money not invested in any opportunity. The problem then becomes to count the number of nonnegative integer solutions of
+        \[
+          x_1 + x_2 + x_3 + x_4 + x_5 = 20
+        \]
+        For which the above formula gives
+        \[
+          \binom{24}{4} = 10626
+        \]
+      </li>
+    </ol>
+  </div>
 </div> <!-- mathematics -->
 
 <div style="height:400px"></div>
